@@ -1,0 +1,593 @@
+/* KIT
+
+white: #ffffff;
+main background: #074261;
+placeholder: #808080;
+placeholder 2 :#282828;
+button background: #3d5ed8;
+button text: #fefefe;
+circle_date background: #ff3546;
+kind_event background: #ee7a30;
+new_event color: #7990e3;
+
+*/
+
+/*Google Fonts --> Roboto*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic');
+
+
+/*Mai*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: #ffffff;
+  font-family: Roboto;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 37px;
+}
+
+h3 {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 17px;
+}
+
+.container {
+  height: 804px;
+  width: 1920px;
+  background: #074261;
+  padding-top: 57px;
+}
+
+
+/*Search*/
+.box_search {
+  height: 95px;
+  width: 1173px;
+  margin: auto;
+}
+
+.topic {
+  height: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.topic p {
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.events {
+  height: 20px;
+  width: 120px;
+}
+
+.add {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.plus {
+  height: 17px;
+  width: 18px;
+  margin-right: 10px;
+}
+
+.box_input {
+  height: 35px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.box_input input{
+  height: 46px;
+  background-color: #ffffff;
+  border: none;
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #808080;
+  margin-right: 10px;
+}
+
+#main_input {
+  width: 574px;
+  text-indent: 20px;
+}
+
+#main_input::-webkit-input-placeholder {
+  font-family: "Roboto";
+  font-size: 16px;
+  text-indent: 20px;
+  color: #808080;
+}
+
+#main_input::-moz-placeholder {
+  font-family: "Roboto";
+  font-size: 16px;
+  text-indent: 20px;
+  color: #808080;
+}
+
+#fmain_input:-moz-placeholder {
+  font-family: "Roboto";
+  font-size: 16px;
+  text-indent: 20px;
+  color: #808080;
+}
+
+#main_input:-ms-input-placeholder {
+  font-family: "Roboto";
+  font-size: 16px;
+  text-indent: 20px;
+  color: #808080;
+}
+
+.datepicker-here{
+  font-family: "Roboto";
+  font-size: 16px;
+  width: 120px;
+  background-image: url(img/calendar.png);
+  background-position: 15% 50%;
+  background-repeat: no-repeat;
+  color: #808080;
+}
+
+.datepicker-here::-webkit-input-placeholder {
+  font-family: "Roboto" !important;
+  font-size: 16px !important;
+  color: #808080 !important;
+}
+
+.datepicker-here::-moz-placeholder {
+  font-family: "Roboto" !important;
+  font-size: 16px !important;
+  color: #808080 !important;
+}
+
+.datepicker-here:-moz-placeholder {
+  font-family: "Roboto" !important;
+  font-size: 16px !important;
+  color: #808080 !important;
+}
+
+.datepicker-here:-ms-input-placeholder {
+  font-family: "Roboto" !important;
+  font-size: 16px !important;
+  color: #808080 !important;
+}
+
+#city_input {
+  font-family: "Roboto";
+  font-size: 16px;
+  width: 186px;
+  color: #282828;
+  background-image: url(img/pointer.png);
+  background-position: 8% 50%;
+  background-repeat: no-repeat;
+}
+
+#city_input::-webkit-input-placeholder {
+  font-family: "Roboto" !important;
+  font-size: 16px !important;
+  color: #282828 !important;
+
+}
+#city_input::-moz-placeholder {
+  font-family: "Roboto" !important;
+  font-size: 16px !important;
+  color: #282828 !important;
+}
+#city_input:-moz-placeholder {
+  font-family: "Roboto" !important;
+  font-size: 16px !important;
+  color: #282828 !important;
+}
+#city_input:-ms-input-placeholder {
+  font-family: "Roboto" !important;
+  font-size: 16px !important;
+  color: #282828 !important;
+}
+
+.box_input button {
+  width: 260px;
+  height: 46px;
+  background-color: #3d5ed8;
+  border: none;
+  color: #fefefe;
+  font-family: Roboto;
+  font-size: 16px;
+}
+
+/*Event in slider*/
+#top_events {
+  height: 550px;
+  width: 11600px;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: flex-start;
+}
+
+#botton_events {
+  height: 550px;
+  width: 11600px;
+  position: relative;
+  bottom: 520px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  z-index: 0;
+}
+
+.box_events{
+  height: 549px;
+  width: 1920px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.box_events_botton{
+  align-items: flex-end;
+}
+
+.circle_date {
+  border-radius: 50%;
+  background: #ff3546;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.small_circle {
+  height: 49px;
+  width: 49px;
+}
+
+.big_circle {
+  height: 107px;
+  width: 107px;
+}
+
+.small_circle p {
+  font-size: 10px;
+}
+
+.big_circle p {
+  font-size: 18px;
+}
+
+.circle_event {
+  border-radius: 50%;
+  overflow: hidden;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.small_circle_event {
+  height: 177px;
+  width: 177px;
+}
+
+.middle_circle_event {
+  width: 252px;
+  height: 252px;
+}
+
+.big_circle_event {
+  width: 391px;
+  height: 391px;
+  background-image: url(img/evro_big.png);
+  position: relative;
+  top: 60px;
+  right: 155px;
+}
+
+.kind_event {
+  height: 14px;
+  width: 39px;
+  background: #ee7a30;
+  z-index: 3;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.circle5 .kind_event {
+  width: 55px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.big_circle_event .kind_event {
+  width: 55px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.circle9 .kind_event {
+  width: 55px;
+}
+
+.circle11 .kind_event {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.circle15 .kind_event {
+  width: 55px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.circle20 .kind_event {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.kind_event p{
+  font-size: 13px;
+}
+
+.circle1 {
+  margin-left: 18px;
+  margin-top: 95px;
+}
+
+.circle2 {
+  position: relative;
+  top: 95px;
+  right: 50px;
+  background-image: url(img/lords-of-the-sound.png);
+}
+
+.circle3 {
+  margin-left: 50px;
+  margin-top: 110px;
+}
+
+.circle4 {
+  margin-left: 40px;
+  margin-top: 80px;
+}
+
+.circle5 {
+  position: relative;
+  top: 60px;
+  right: 50px;
+  background-image: url(img/dm2016.png);
+}
+
+.circle6 {
+  margin-left: 30px;
+  margin-top: 73px;
+}
+
+.circle7 {
+  margin-left: -80px;
+  margin-top: 85px;
+}
+
+.circle8 {
+  margin-left: 63px;
+  margin-top: 80px;
+}
+
+.circle9 {
+  position: relative;
+  top: 75px;
+  right: 50px;
+  background-image: url(img/les.png);
+}
+
+.circle10 {
+  margin-top: 75px;
+}
+
+.circle11 {
+  position: relative;
+  top: 60px;
+  right: 50px;
+  background-image: url(img/thumb.png);
+}
+
+.circle12 {
+  margin-left: -50px;
+  margin-top: 190px;
+}
+
+
+.circle13 {
+  margin-bottom: 170px;
+}
+
+.circle14 {
+  margin-bottom: 260px;
+  margin-left: 60px;
+}
+
+.circle15 {
+  position: relative;
+  bottom: 76px;
+  right: 50px;
+  background-image: url(img/tchaikovsky.png);
+}
+
+.circle16 {
+  margin-bottom: 100px;
+  margin-left: -20px;
+}
+
+.circle17 {
+  margin-bottom: 180px;
+  margin-left: 40px;
+}
+
+.circle18 {
+  position: relative;
+  bottom: 50px;
+  right: 60px;
+  background-image: url(img/armin-van-buuren.png);
+}
+
+.circle19 {
+  margin-bottom: 260px;
+  margin-left: 310px;
+}
+
+.circle20 {
+  position: relative;
+  bottom: 60px;
+  right: 70px;
+  background-image: url(img/irma.png);
+}
+
+.circle21 {
+  background: #ffffff;
+  position: relative;
+  bottom: 200px;
+  cursor: pointer;
+}
+
+.new_event {
+  color: #7990e3;
+  font-size: 14px !important;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.circle22 {
+  margin-bottom: 210px;
+  margin-left: 140px;
+}
+
+.circle23 {
+  position: relative;
+  bottom: 80px;
+  right: 50px;
+  background-image: url(img/ran.png);
+}
+
+.screen {
+  height: 550px;
+  width: 1920px;
+  overflow: hidden;
+}
+
+#long_box {
+  height: 549px;
+  width: 11600px;
+  position: relative;
+  -webkit-transition: right 2s ease-out;
+  -moz-transition: right 2s ease-out;
+  -o-transition: right 2s ease-out;
+  transition: right 2s ease-out;
+}
+
+.circle_event:hover, .circle_event:active {
+  opacity: 0.75;
+}
+
+#big_img {
+  height: 0px;
+  width: 1920px;
+  z-index: 20;
+  background: #074261;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: height 0.5s ease-out;
+  -moz-transition: height 0.5s ease-out;
+  -o-transition: height 0.5s ease-out;
+  transition: height 0.5s ease-out;
+  position: absolute;
+}
+
+.big_img_open {
+  height: 549px !important;
+  margin-top: 30px;
+}
+
+/*Months and controls*/
+.months {
+  height: 60px;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.months p {
+  height: 50px;
+  width: 191px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 16px;
+  opacity: 0.25;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 19px;
+  cursor: pointer;
+}
+
+.months p:hover, .months p:active {
+  border-top: 3px solid #ffffff!important;
+  color: #ffffff!important;
+  opacity: 1;
+}
+
+.month_active {
+  border-top: 3px solid #ffffff!important;
+  color: #ffffff!important;
+  opacity: 1!important;
+}
+
+.controls {
+  height: 80px;
+  width: 1360px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  bottom: 445px;
+  margin: auto;
+}
+
+.one_control {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #130f0f;
+  opacity: 0.6;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 15;
+}

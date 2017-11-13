@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>Test_Kitsoft - Kuts Anton</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="dist/css/datepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- Search -->
+      <div class="box_search">
+        <div class="topic">
+        <img class="events" src="img/events.png" alt="events">
+          <a class="add" href="#">
+            <img class="plus" src="img/plus.png" alt="plus">
+            <p>Добавить</p>
+          </a>
+        </div>
+        <div class="box_input">
+          <input id="main_input" type="text" placeholder="Место, объект, название, тематика, активность">
+          <input id="data_input" class="datepicker-here" type="text" data-position="bottom left" placeholder="         Дата">
+          <input id="city_input" type="text" placeholder="        Ивано-Франковск">
+          <button id="search" type="button" name="button" value="Проверить">Найти</button>
+        </div>
+      </div>
+
+      <!-- Event in slider -->
+      <div class="screen">
+        <!-- For one event -->
+        <div id="big_img" onclick="big_img_clear()"></div>
+        <!-- Events from JS -->
+        <div id="long_box">
+          <div id="top_events">
+          </div>
+          <div id="botton_events">
+          </div>
+        </div>
+      </div>
+
+      <!-- Months and controls -->
+      <div class="months">
+        <p class="month month_active" id="m1">Январь</p>
+        <p class="month" id="m2">Февраль</p>
+        <p class="month" id="m3">Март</p>
+        <p class="month" id="m4">Апрель</p>
+        <p class="month" id="m5">Май</p>
+        <p class="month" id="m6"> Июнь</p>
+      </div>
+      <div class="controls">
+        <div class="one_control" id="left">
+          <img src="img/left_a.png" alt="left">
+        </div>
+        <div class="one_control" id="right">
+          <img src="img/right_a.png" alt="right">
+        </div>
+      </div>
+    </div> <!-- end container -->
+
+    <!-- Jquery and JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dist/js/datepicker.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+
+  </body>
+</html>
